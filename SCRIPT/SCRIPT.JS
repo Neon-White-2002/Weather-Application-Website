@@ -10,7 +10,7 @@ Loation_Btn = Input_Part.querySelector("button"),
 Weather_Image = document.querySelector(".weather-part img");
 
 // #API - KEY FOR 'OPEN - WEATHER -APP': -
-let API_Key = "576b39c9be8cede3a8038ec4f341d678";
+let API_Key = "API-KEY";
 let API;
 
 // #USING THIS, BUTTON WE CAN NAVIGATE: -
