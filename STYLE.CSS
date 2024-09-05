@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #43AFFC;
+}
+
+.Wrapper 
+{
+    width: 500px;
+    background: #FFF;
+    border-radius: 5px;
+}
+
+.Wrapper header 
+{
+    color: #43AFFC;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 17px 15px;
+    border-bottom: 3px solid #BFBFBF;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+header i 
+{
+    font-size: 0em;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+header span
+{
+    width: 55px;
+    height: 55px;
+    margin-right: 5px;
+}
+
+header span img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.Wrapper.Active header i
+{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.Wrapper .Input-Part 
+{
+    margin: 20px 25px 30px;
+}
+
+.Wrapper.Active .Input-Part
+{
+    display: none;
+}
+
+.Input-Part .Info-Text 
+{
+    font-size: 17px;
+    text-align: center;
+    padding: 13px 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.Info-Text.Error 
+{
+    color: #0C5460;
+    background: #D1ECF1;
+    border: 1.5px solid #BEE5EB;
+    font-weight: bold;
+    display: block;
+}
+
+.Info-Text.Pending 
+{
+    color: #0C5460;
+    background: #D1ECF1;
+    border: 1.5px solid #BEE5EB;
+    font-weight: bold;
+    display: block;
+}
+
+.Input-Part :where(input, button) 
+{
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+.Input-Part input 
+{
+    text-align: center;
+    border: 1.5px solid #BFBFBF;
+    text-transform: uppercase;
+}
+
+.Input-Part input:is(:focus, :valid) 
+{
+    border: 3px solid #43AFFC;
+}
+
+.Input-Part .Separator 
+{
+    width: 100%;
+    height: 1.5px;
+    background: #CCC;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Separator::before 
+{
+    content: "OR";
+    background: #FFF;
+    padding: 0 15px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+
+.Input-Part button 
+{
+    color: #FFF;
+    background: #43AFFC;
+    cursor: pointer;
+}
+
+.Wrapper .weather-part 
+{
+    margin: 30px 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+.Wrapper.Active .weather-part 
+{
+    display: flex;
+}
+
+.weather-part img 
+{
+    max-width: 130px;
+}
+
+.weather-part .temp 
+{
+    display: flex;
+    font-weight: 500;
+    font-size: 70px;
+}
+
+.weather-part .temp .numb 
+{
+    font-weight: 500;
+}
+
+.weather-part .temp .deg 
+{
+    font-size: 40px;
+    display: block;
+    margin: 10px 5px 0 0;
+}
+
+.weather-part .weather 
+{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location 
+{
+    display: flex;
+    font-size: 20px;
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.location i {
+    font-size: 20px;
+    margin: 5px 5px 0 0;
+}
+
+.weather-part .bottom-details 
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1.5px solid #ccc;
+}
+
+.bottom-details .column 
+{
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i 
+{
+    color: #43AFFC;
+    font-size: 40px;
+}
+
+.column.humidity 
+{
+    border-left: 1.5px solid #ccc;
+}
+
+.column .details 
+{
+    margin-left: 3px;
+}
+
+.details .temp,
+.humidity span 
+{
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.details .temp .deg 
+{
+    margin: 0;
+    font-size: 17px;
+    padding: 0 3px 0 3px;
+}
+
+.column .details p 
+{
+    font-size: 15px;
+    margin-top: -6px;
+}
+
+.humidity i 
+{
+    font-size: 37px;
+    font-weight: bold;
+}
